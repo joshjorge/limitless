@@ -1,0 +1,71 @@
+<section class="allDetails">
+    <div class="row g-0 m-0">
+        <div class="col-md-4 imgContainer">
+            <img src="<%= vehicle.imagePath %>" class="img-fluid " alt="...">
+        </div>
+        <div class="col-md-4 detailsContainer">
+            <div class=" card-body ">
+                <h3 class="card-title ">
+                    Modele:
+                    <%= vehicle.vehicleModele%>
+                </h3>
+                <h4 class="card-title ">
+                    Mark:
+                    <%= vehicle.vehicleMake%>
+                </h4>
+                <h5 class="card-title ">
+                    Type:
+                    <%= vehicle.transmission%>
+                </h5>
+                <h5 class="card-title ">
+                    Doors:
+                    <%= vehicle.vehicleDoor%>
+                </h5>
+                <h5 class="card-title ">
+                    Seats:
+                    <%= vehicle.vehicleSeat%>
+                </h5>
+                <h5 class="card-title ">
+                    Color:
+                    <%= vehicle.vehicleColor%>
+                </h5>
+                <h5 class="card-title ">
+                    Bagage numb:
+                    <%= vehicle.vehicleBagageNumb%>
+                </h5>
+                <p class="card-text ">
+                    <%= vehicle.description %>
+                </p>
+                <p class="card-text "><small class="text-muted ">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="container contents">
+    <% otherItem.forEach(vehicle=> { %>
+
+        <div class="products">
+            <div class="item-img">
+                <a href="/itemdetails/<%= vehicle._id%> ">
+                    <div>
+                        <img src="<%= vehicle.imagePath %>" alt="">
+                    </div>
+                </a>
+            </div>
+            <div class="item-info">
+                <div class="price">
+                    <h4>
+                        $ Price /day
+                    </h4>
+                </div>
+                <div class="details">
+                    <h6>
+                        Model color year
+                    </h6>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+</div>

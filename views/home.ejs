@@ -1,0 +1,40 @@
+<section class="main">
+    <div class="container-fluid m-0 downNav">
+        <img class="backImg" src="/imgs/istockphoto-465441968-170667a-removebg-preview.png" alt="" srcset="">
+    </div>
+    <form action="/" method="get" class="searchForm">
+        <div class="form__group field">
+            <input type="text" class="form__field" value="<%= input %>" name="search" placeholder="Search...">
+            <label for="name" class="form__label">Search</label>
+        </div>
+
+    </form>
+    <div class="container-fluid contents">
+        <% if (filtered.length==0) { %>
+            <p>the search returned no results.</p>
+            <% } %>
+                <% filtered.forEach(vehicle=> { %>
+                    <div class="products">
+                        <div class="item-img">
+                            <a href="/itemdetails/<%= vehicle._id%> ">
+                                <div>
+                                    <img src="<%= vehicle.imagePath %>" alt="">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item-info">
+                            <div class="price">
+                                <h4>
+                                    $ <%= vehicle.dailyPrice %> /day
+                                </h4>
+                            </div>
+                            <div class="details">
+                                <h6>
+                                    Model color year
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                    <% }) %>
+    </div>
+</section>

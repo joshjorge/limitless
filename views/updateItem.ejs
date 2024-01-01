@@ -1,0 +1,41 @@
+<div class="container updateItemPage" style="margin-top: 80px;margin-bottom: 80px;">
+    <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Search</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" name="search" placeholder="Seach by name">
+    </div <div class="allCardsContainer">
+    <% vehicles.forEach(vehicle=> { %>
+        <div class="itemUpdateContainer">
+            <div class="images">
+                <img src="<%=vehicle.imagePath%>" />
+
+
+                <div class="product">
+                    <p>
+                        <%= vehicle.vehicleModele %>
+                    </p>
+                    <h1>
+                        <%= vehicle.vehicleMake%>
+                    </h1>
+                    <h2>
+                        <%= vehicle.dailyPrice %>
+                    </h2>
+                    <p class="desc">
+                        <%=vehicle.description %>
+                    </p>
+                    <div class="buttons">
+                        <button class="edit"><a href="/updateItem/<%= vehicle._id %> ">
+                                Edit
+                            </a></button>
+                        <form method="POST" action="/admin/updateItem/<%=vehicle._id%>?_method=DELETE">
+                            <button class="delete"><span>
+                                    <ion-icon name="trash-outline"></ion-icon>
+                                </span></button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+</div>
+</div>

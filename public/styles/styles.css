@@ -1,0 +1,780 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+  font-size: 15px;
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+/* navBar */
+
+.navbar {
+  background: rgb(4, 109, 60);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu {
+  background: rgb(20, 119, 72);
+}
+
+.nav-link,
+.navbar-brand {
+  color: rgb(255, 255, 255);
+}
+
+.navbar-expand-lg .navbar-collapse {
+  align-items: end;
+  justify-content: right;
+  padding-right: 150px;
+}
+
+/* endNavBar */
+
+/* Search */
+
+.searchForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:placeholder-shown~.form__label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #9b9b9b;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+}
+
+.form__field:focus~.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #11998e;
+  font-weight: 700;
+}
+
+
+/* endSearch */
+
+/* Item */
+
+
+
+.downNav {
+  position: relative;
+  height: 560px;
+}
+
+.downNav::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  bottom: 5%;
+  right: 0;
+  left: 48%;
+  background: rgb(4, 109, 60);
+}
+
+
+.backImg {
+  position: absolute;
+  right: 0px;
+  height: 550px;
+}
+
+.contents {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.products {
+  /* height: 240px;*/
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  /* box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
+  cursor: pointer;
+}
+
+.products:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.item-img div {
+  min-height: 200px;
+  max-height: 200px;
+  width: 100%;
+}
+
+.item-img img {
+  min-height: 200px;
+  max-height: 200px;
+  width: 100%;
+  padding: 8px;
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  padding: 8px;
+}
+
+.item-right h2 {
+  margin: 5px 10px 0 0;
+  color: goldenrod;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.item-info .year {
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+}
+
+.item-right a {
+  margin: 5px 10px 0 0;
+  color: goldenrod;
+  display: block;
+}
+
+/* EndItem */
+
+/* itemDetails */
+
+.allDetails {
+  position: relative;
+  height: 400px;
+  background: rgb(4, 109, 60);
+  margin-bottom: 25px;
+  color: antiquewhite;
+}
+
+.allDetails img {
+  padding: 5px;
+}
+
+.allDetails:first-child {
+  padding-top: 80px;
+}
+
+/* .allDetails .detailsContainer::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    height: 315px;
+    width: 2px;
+    margin: 10px;
+    background: rgb(29, 125, 79);
+} */
+
+.card-body {
+  margin-left: 15px;
+}
+
+/* itemDetailsEnd */
+
+/* card */
+
+.creditCardForm {
+  max-width: 700px;
+  background-color: #fff;
+  overflow: hidden;
+  padding: 25px;
+  color: #4c4e56;
+}
+
+.creditCardForm label {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.creditCardForm .heading h1 {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: #4c4e56;
+}
+
+.creditCardForm .payment {
+  float: left;
+  font-size: 18px;
+  padding: 10px 25px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.creditCardForm .payment .form-group {
+  float: left;
+  margin-bottom: 15px;
+}
+
+.creditCardForm .payment .form-control {
+  line-height: 40px;
+  height: auto;
+  padding: 0 16px;
+}
+
+.creditCardForm .owner {
+  width: 63%;
+  margin-right: 10px;
+}
+
+.creditCardForm .CVV {
+  width: 35%;
+}
+
+.creditCardForm #card-number-field {
+  width: 100%;
+}
+
+.creditCardForm #expiration-date {
+  width: 49%;
+}
+
+.creditCardForm #credit_cards {
+  width: 50%;
+  margin-top: 25px;
+  text-align: right;
+}
+
+.creditCardForm #pay-now {
+  width: 100%;
+  margin-top: 25px;
+}
+
+.creditCardForm .payment .btn {
+  width: 100%;
+  margin-top: 3px;
+  font-size: 24px;
+  background-color: #2ec4a5;
+  color: white;
+}
+
+.creditCardForm .payment select {
+  padding: 10px;
+  margin-right: 15px;
+}
+
+.transparent {
+  opacity: 0.2;
+}
+
+
+/* cardEnd */
+
+/* Log */
+.logInForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.form {
+  background-color: #fff;
+  display: block;
+  padding: 1rem;
+  max-width: 350px;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.form-title {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+  color: #000;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-container input,
+.form button {
+  outline: none;
+  border: 1px solid #e5e7eb;
+  margin: 8px 0;
+}
+
+.input-container input {
+  background-color: #fff;
+  padding: 1rem;
+  padding-right: 3rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  width: 300px;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.submit {
+  display: block;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  background-color: rgb(4, 109, 60);
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  width: 100%;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+}
+
+.signup-link {
+  color: #6B7280;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-align: center;
+}
+
+.signup-link a {
+  text-decoration: underline;
+}
+
+/* logEnd */
+
+/* singUp */
+
+.singUpForm {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.singUpForm a {
+  text-decoration: none;
+}
+
+/* singupEnd */
+
+/* userPAge */
+
+.userPage {
+  height: 100vh;
+}
+
+.updatePasscode {
+  width: 480px;
+}
+
+.userProfilEditBtn {
+  text-decoration: none;
+  color: darkgreen;
+}
+
+/* userPAgeEnd */
+
+/* publishItem */
+
+.createItem {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 90%;
+  height: 100vh;
+  margin: 100px;
+}
+
+
+.imgContainer {
+  flex-grow: 4;
+}
+
+.secondForm form .newItem {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+
+.addDetailsPart {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 8;
+}
+
+/* publishItemEnd */
+
+/* updateItemPage */
+
+.updateItemPage {
+  height: 100%;
+}
+
+.allCardsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.itemUpdateContainer {
+  position: relative;
+  overflow: hidden;
+  width: 520px;
+  height: 350px;
+  box-shadow: 5px 5px 15px rgba(186, 126, 126, 0.5);
+  border-radius: 10px;
+}
+
+.itemUpdateContainer p {
+  font-size: 0.6em;
+  letter-spacing: 1px;
+}
+
+.itemUpdateContainer h1 {
+  font-size: 1.2em;
+  color: #4e4e4e;
+  margin-top: -5px;
+}
+
+.itemUpdateContainer h2 {
+  margin-top: -5px;
+}
+
+.itemUpdateContainer img {
+  width: 290px;
+  margin-top: 47px;
+}
+
+.slideshow-buttons {
+  top: 70%;
+  display: none;
+}
+
+.itemUpdateContainer .product {
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  top: 10%;
+  left: 60%;
+}
+
+.itemUpdateContainer .desc {
+  text-transform: none;
+  letter-spacing: 0;
+  margin-bottom: 17px;
+  color: #4e4e4e;
+  font-size: 0.7em;
+  line-height: 1.6em;
+  margin-right: 25px;
+  text-align: justify;
+}
+
+.itemUpdateContainer button {
+  padding: 10px;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  margin: -1px;
+  border-radius: 2px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.itemUpdateContainer a {
+
+  text-decoration: none;
+  color: rgb(11, 94, 55);
+
+}
+
+
+
+.itemUpdateContainer button:hover {
+  background: rgb(4, 109, 60);
+  transition: all 0.4s ease-in-out;
+  color: white;
+}
+
+.itemUpdateContainer .edit {
+  width: 67%;
+}
+
+
+
+.itemUpdateContainer .delete {
+  width: 67%;
+  margin-top: 5px;
+  color: red;
+}
+
+
+
+.itemUpdateContainer .sizes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 30px);
+  width: 60%;
+  grid-gap: 4px;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.itemUpdateContainer .sizes:hover {
+  cursor: pointer;
+}
+
+.itemUpdateContainer .pick {
+  margin-top: 11px;
+  margin-bottom: 0;
+  margin-left: 20px;
+}
+
+.itemUpdateContainer .size {
+  padding: 9px;
+  border: 1px solid rgb(4, 109, 60);
+  font-size: 0.7em;
+  text-align: center;
+}
+
+.itemUpdateContainer .size:hover {
+  background: rgb(4, 109, 60);
+  color: white;
+  transition: all 0.4s ease-in-out;
+}
+
+.itemUpdateContainer .focus {
+  background: rgb(4, 109, 60);
+  color: white;
+}
+
+/* updateItemPageEnd */
+
+/* allSelection */
+
+/* allSelectionEnd */
+
+
+/* adminItemDetailsAndUpdate */
+
+.adminEditPage {
+  min-height: 100vh;
+  width: 95%;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
+.thisItem {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 100%;
+  margin: 100px 0 10px 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.thisItem h6 {
+  opacity: 0.6;
+  margin: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+
+.thisItem-image {
+  max-width: 350px;
+}
+
+.thisItem-image img {
+  max-width: 350px;
+}
+
+
+
+.thisItem-info {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+
+
+.first-info,
+.second-info {
+  flex: 6;
+  position: relative;
+}
+
+.first-info::before,
+.second-info::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: #dddfe2;
+  height: 90%;
+  width: 1px;
+
+}
+
+.adminEditPage .btn-container .btn {
+  float: right;
+  background: rgb(4, 109, 60);
+}
+
+/* adminItemDetailsAndUpdateEnd */
+
+/* footer */
+
+.footer-basic {
+  padding: 40px 0;
+  background: rgb(4, 109, 60);
+  color: rgb(255, 255, 255);
+}
+
+.footer-basic ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.footer-basic li {
+  padding: 0 10px;
+}
+
+.footer-basic ul a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity: 1;
+}
+
+.footer-basic .social {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.footer-basic .social>a {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: 0 8px;
+  color: inherit;
+  opacity: 0.75;
+  overflow: hidden;
+}
+
+.footer-basic .social>a:hover {
+  opacity: 0.9;
+}
+
+.footer-basic .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: rgb(255, 255, 255);
+  margin-bottom: 0;
+}
+
+/* EndFoot */
+
+/* filePond */
+.filepond--root {
+  min-width: 90%;
+  margin: 0 auto;
+}
+
+/* filePondEnd */
+
+/* singUpEnd */
+
+@media (min-width: 768px) {}
+
+/* Home End  */
+
+/* Item */

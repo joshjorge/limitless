@@ -1,0 +1,156 @@
+<div class="adminEditPage">
+
+    <div class="thisItem">
+        <div class="thisItem-image">
+            <img src="<%= vehicle.imagePath %>" alt="...">
+        </div>
+        <div class="thisItem-info">
+            <div class="first-info">
+                <h6>Modele: <%= vehicle.vehicleModele%>
+                </h6>
+                <h6>Mark: <%= vehicle.vehicleMake%>
+                </h6>
+                <h6>Type: <%= vehicle.transmission%>
+                </h6>
+                <h6>Door number: <%= vehicle.vehicleDoor%>
+                </h6>
+                <h6>Seats: <%= vehicle.vehicleSeat%>
+                </h6>
+                <h6>color: <%= vehicle.vehicleColor%>
+                </h6>
+                <h6>Bagage number: <%= vehicle.vehicleBagageNumb%>
+                </h6>
+            </div>
+            <div class="second-info">
+                <h6>
+                    <%= vehicle.description %>
+                </h6>
+            </div>
+        </div>
+    </div>
+
+    <div class="secondForm">
+        <form class="row g-3 needs-validation" novalidate action="" method="POST">
+            <div class="newItem">
+                <div class="col-md-12 imgContainer" style="min-width: 100%;">
+                    <span>
+                        <input width="100" height="150" type="file" name="image" class="filepond">
+                    </span>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="validationCustom01" name="vehicleMake"
+                        placeholder="Make" value="<%= vehicle.vehicleMake  %>" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="validationCustom02" name="vehicleModele"
+                        placeholder="Model" value="<%= vehicle.vehicleModele %>" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="validationCustom05" name="dailyPrice"
+                        placeholder="Daily price" value="<%= vehicle.dailyPrice %>" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid zip.
+                    </div>
+                </div>
+
+
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="validationCustom03" name="vehicleColor"
+                        placeholder="color" value="<%= vehicle.vehicleColor %>" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid city.
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <select class="form-select" id="validationCustom04" name="vehicleBagage" required>
+                        <option selected disabled>
+                            <%= vehicle.vehicleBagage %>
+                        </option>
+                        <% for( let index=0; index < 10; index++ ) { %>
+                            <option label=<%=index%> value=<%=index %> >
+                                    <% } %>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a valid state.
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <select class="form-select" id="validationCustom04" name="vehicleDoor" required>
+                        <option selected disabled>
+                            <%= vehicle.vehicleDoor %>
+                        </option>
+                        <% for( let index=0; index < 10; index++ ) { %>
+                            <option label=<%=index%> value=<%=index %> >
+                                    <% } %>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a valid state.
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <select class="form-select" id="validationCustom04" name="fuelType" required>
+                        <option selected disabled>
+                            <%= vehicle.fuelType %>
+                        </option>
+                        <option label='Gas' value='gas'>
+                        <option label='Diesel' value='diesel'>
+                        <option label='Electricity' value='electricity'>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a valid state.
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <select class="form-select" id="validationCustom04" name="transmission" required>
+                        <option selected disabled>
+                            <%= vehicle.transmission %>
+                        </option>
+                        <option label='Manuel' value='manuel'>
+                        <option label='Auto' value='auto'>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a valid state.
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <select class="form-select" id="validationCustom04" name="vehicleSeat" required>
+                        <option selected disabled>
+                            <%= vehicle.vehicleSeat %>
+                        </option>
+                        <% for( let index=1; index < 20; index++ ) { %>
+                            <option label=<%=index%> value=<%= index %> >
+
+                                    <% } %>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a valid state.
+                    </div>
+                </div>
+
+                <div class="col-md-9 form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
+                        name="description"><%= vehicle.description %></textarea>
+                    <label for="floatingTextarea">description</label>
+                </div>
+                <form method="POST" action="/updateItem/<%=vehicle._id%>?_method=DELETE">
+                    <div class="col-12 btn-container">
+                        <button class="btn" type="submit">Update</button>
+                    </div>
+                </form>
+
+            </div>
+        </form>
+    </div>
+</div>
